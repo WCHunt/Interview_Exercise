@@ -12,7 +12,7 @@ jobs:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
           DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
         run: |
-          docker login -u $DOCKERHUB_USER -P $DOCKERHUB_PASS
+          docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
       - name: Docker Build
         run: |
           docker build -t node-exercise-image .
