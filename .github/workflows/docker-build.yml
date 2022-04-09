@@ -17,4 +17,4 @@ jobs:
         run: |
           docker build -t node-exercise .
       - name: Docker Push
-        run: docker push $DOCKERHUB_USER/exercise:node-exercise
+        run: docker push wchunt/exercise:node-exercise
