@@ -15,6 +15,6 @@ jobs:
           docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
       - name: Docker Build
         run: |
-          docker build -t node-exercise .
+          docker build -t exercise .
       - name: Docker Push
-        run: docker push wchunt/exercise:node-exercise
+        run: docker push $DOCKERHUB_USER/exercise
