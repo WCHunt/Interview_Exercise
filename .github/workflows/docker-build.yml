@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: run tests
-        uses: liatrio/github-actions/apprentice-action@apprentice-action
-
       - name: Docker Login
         env:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
@@ -19,5 +16,9 @@ jobs:
       - name: Docker Build
         run: |
           docker build -t wchunt/exercise .
+
+      - name: run tests
+        uses: liatrio/github-actions/apprentice-action@apprentice-action
+
       - name: Docker Push
         run: docker push wchunt/exercise
