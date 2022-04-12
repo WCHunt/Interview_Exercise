@@ -1,0 +1,10 @@
+version: "3"
+services:
+    wchunt/exercise:
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - /app/node_modules
+        enviorment:
+            -PORT=80
