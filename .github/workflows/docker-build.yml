@@ -14,8 +14,7 @@ jobs:
         run: |
           docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
       - name: Docker Build
-        run: |
-          docker build -t wchunt/exercise .
+        run: docker-compose up
 
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
