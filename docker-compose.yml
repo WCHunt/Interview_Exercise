@@ -1,6 +1,6 @@
 version: "3"
 services:
-    wchunt/exercise:
+    exercise:
         build: .
         ports:
             - "80:80"
