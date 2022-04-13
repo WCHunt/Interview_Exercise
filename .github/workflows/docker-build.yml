@@ -16,10 +16,6 @@ jobs:
       - name: Docker Build
         run: |
           docker build -t wchunt/exercise .
-          
-      - name: Docker run
-        run: |
-          docker run -v /app/node_modules -e -p 80:80 -d --name exercise wchunt/exercise
 
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
