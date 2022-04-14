@@ -20,8 +20,6 @@ jobs:
         uses: liatrio/github-actions/apprentice-action@master
         with:
           image: wchunt/exercise
-          ports: 
-            - 3000:80
    
       - name: Docker Push
         run: docker push wchunt/exercise
