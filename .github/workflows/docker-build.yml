@@ -17,13 +17,13 @@ jobs:
         run: |
           docker build -t wchunt/exercise .
       - name: Docker Run
-        run: docker run -p 80:80 wchunt/exercise
+        run: docker run -v /app/node_modules -p 80:80 -d wchunt/exercise
         
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
         
       - name: docker stop
-        run: docker wchunt/exercise -rm
+        run: docker rm wchunt/exercise -f
    
       - name: Docker Push
         run: docker push wchunt/exercise
