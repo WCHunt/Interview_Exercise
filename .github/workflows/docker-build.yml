@@ -16,9 +16,11 @@ jobs:
       - name: Docker Build
         run: |
           docker build -t wchunt/exercise .
-
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
+        with:
+          images: wchunt/exercise
+          ports: 80
 
       - name: Docker Push
         run: docker push wchunt/exercise
